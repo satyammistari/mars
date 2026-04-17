@@ -1,0 +1,98 @@
+[
+  {
+    "slug": "robo-rush-2026",
+    "title": "Robo Rush 2026",
+    "date": "2026-02-14",
+    "formattedDate": "14 Feb 2026",
+    "location": "Innovation Lab, Block C",
+    "category": "Competition",
+    "image": "/portfolio-images/ai-platform-1.jpg",
+    "summary": "A 24-hour robotics sprint to build and race autonomous line followers.",
+    "description": "Robo Rush is MARS CLUB's flagship annual challenge where teams design, assemble, and program autonomous bots under a fixed timeline. The final arena combines dynamic obstacles, turns, and speed checkpoints.",
+    "highlights": [
+      "120+ participants across 32 teams",
+      "Real-time mentor support from alumni",
+      "Live finals streamed to the main auditorium"
+    ]
+  },
+  {
+    "slug": "embedded-bootcamp",
+    "title": "Embedded Systems Bootcamp",
+    "date": "2026-01-20",
+    "formattedDate": "20 Jan 2026",
+    "location": "ECE Seminar Hall",
+    "category": "Workshop",
+    "image": "/portfolio-images/saas-dashboard-1.jpg",
+    "summary": "Hands-on workshop introducing microcontrollers, sensors, and firmware basics.",
+    "description": "This 2-day bootcamp covers Arduino fundamentals, GPIO control, sensor interfacing, and real-world debugging workflows. Participants finish by building a mini automation prototype.",
+    "highlights": [
+      "Starter kits provided to all attendees",
+      "Firmware debugging clinic",
+      "Mini project showcase and peer review"
+    ]
+  },
+  {
+    "slug": "cad-to-prototype",
+    "title": "CAD to Prototype",
+    "date": "2025-11-07",
+    "formattedDate": "07 Nov 2025",
+    "location": "Mechanical Design Studio",
+    "category": "Workshop",
+    "image": "/portfolio-images/ecommerce-interface-1.jpg",
+    "summary": "From concept sketches to manufacturable models in a rapid design pipeline.",
+    "description": "Students learn DFM principles, tolerance planning, and rapid prototyping. The session focuses on converting CAD assemblies into practical prototypes using available fabrication tools.",
+    "highlights": [
+      "Industry-led session on design constraints",
+      "3D print quality tuning module",
+      "Best prototype awards"
+    ]
+  },
+  {
+    "slug": "mars-tech-summit",
+    "title": "MARS Tech Summit",
+    "date": "2025-09-18",
+    "formattedDate": "18 Sep 2025",
+    "location": "Main Convention Hall",
+    "category": "Event",
+    "image": "/portfolio-images/fintech-dashboard-1.jpg",
+    "summary": "A one-day summit on robotics innovation, startup journeys, and future skills.",
+    "description": "MARS Tech Summit brings experts from robotics startups, research labs, and manufacturing leaders. Sessions include keynote talks, founder stories, and technical demos for students.",
+    "highlights": [
+      "Keynotes from 5 industry leaders",
+      "Panel on career pathways in robotics",
+      "Networking zone with recruiters"
+    ]
+  },
+  {
+    "slug": "ai-for-robotics-lab",
+    "title": "AI for Robotics Lab",
+    "date": "2025-08-26",
+    "formattedDate": "26 Aug 2025",
+    "location": "AI Lab - CS Block",
+    "category": "Workshop",
+    "image": "/portfolio-images/healthcare-platform-1.jpg",
+    "summary": "Build perception pipelines for robots using computer vision and ML models.",
+    "description": "Participants train and deploy lightweight vision models for object detection and basic navigation use-cases. The workshop emphasizes practical inference optimization on edge devices.",
+    "highlights": [
+      "Dataset preparation and annotation",
+      "Inference optimization on low-power hardware",
+      "Live demo of autonomous object sorting"
+    ]
+  },
+  {
+    "slug": "national-robotics-challenge",
+    "title": "National Robotics Challenge",
+    "date": "2025-04-12",
+    "formattedDate": "12 Apr 2025",
+    "location": "IIT Invitational Arena",
+    "category": "Competition",
+    "image": "/portfolio-images/mobile-app-1.jpg",
+    "summary": "Inter-college competition where MARS teams secured top podium finishes.",
+    "description": "MARS CLUB represented the college at the National Robotics Challenge with teams competing in autonomous navigation and robotic arm precision tasks.",
+    "highlights": [
+      "1st place in autonomous navigation",
+      "3rd place in precision pick-and-place",
+      "Special jury mention for system reliability"
+    ]
+  }
+]

@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 4%;
+    --foreground: 210 40% 96%;
+    --card: 224 39% 9%;
+    --card-foreground: 210 40% 96%;
+    --popover: 224 39% 9%;
+    --popover-foreground: 210 40% 96%;
+    --primary: 221 100% 68%;
+    --primary-foreground: 224 71% 4%;
+    --secondary: 222 29% 14%;
+    --secondary-foreground: 210 40% 96%;
+    --muted: 223 28% 18%;
+    --muted-foreground: 215 16% 68%;
+    --accent: 245 83% 72%;
+    --accent-foreground: 224 71% 4%;
+    --destructive: 0 63% 43%;
+    --destructive-foreground: 210 40% 96%;
+    --border: 223 28% 20%;
+    --input: 223 28% 20%;
+    --ring: 221 100% 68%;
+    --radius: 0.85rem;
+    --neon-blue: 99 198 255;
+    --neon-violet: 173 122 255;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body {
+    @apply min-h-screen;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+    background-image: radial-gradient(circle at 18% 14%, rgba(59, 130, 246, 0.12), transparent 34%),
+      radial-gradient(circle at 82% 78%, rgba(139, 92, 246, 0.1), transparent 30%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-orbitron), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  ::selection {
+    background: rgba(96, 165, 250, 0.3);
+    color: #ffffff;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .futuristic-grid {
+    background-image: linear-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.1) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .gradient-text {
+    background: linear-gradient(96deg, rgb(167, 243, 255) 0%, rgb(123, 175, 255) 45%, rgb(182, 144, 255) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .glass-panel {
+    background: linear-gradient(160deg, rgba(15, 23, 42, 0.76), rgba(2, 6, 23, 0.78));
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(71, 85, 105, 0.55);
+  }
+
+  .animate-float-slow {
+    animation: floatSlow 8s ease-in-out infinite;
+  }
+
+  .animate-grid-pan {
+    animation: gridPan 24s linear infinite;
+  }
+
+  .animate-pulse-soft {
+    animation: pulseSoft 5.6s ease-in-out infinite;
+  }
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
+
+@keyframes gridPan {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 56px 56px, 56px 56px;
+  }
+}
+
+@keyframes pulseSoft {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.78;
+  }
+}

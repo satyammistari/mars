@@ -1,0 +1,120 @@
+[
+  {
+    "id": "faculty-1",
+    "name": "Dr. Meera Nair",
+    "role": "Faculty Advisor - Robotics",
+    "section": "faculty",
+    "image": "/placeholder-user.jpg",
+    "linkedin": "https://www.linkedin.com"
+  },
+  {
+    "id": "faculty-2",
+    "name": "Prof. Arjun Patel",
+    "role": "Faculty Mentor - Automation",
+    "section": "faculty",
+    "image": "/placeholder-user.jpg",
+    "linkedin": "https://www.linkedin.com"
+  },
+  {
+    "id": "core-1",
+    "name": "Riya Sharma",
+    "role": "President",
+    "section": "core",
+    "image": "/placeholder-user.jpg",
+    "linkedin": "https://www.linkedin.com"
+  },
+  {
+    "id": "core-2",
+    "name": "Vedant Rao",
+    "role": "Vice President",
+    "section": "core",
+    "image": "/placeholder-user.jpg",
+    "linkedin": "https://www.linkedin.com"
+  },
+  {
+    "id": "core-3",
+    "name": "Isha Kulkarni",
+    "role": "Tech Lead - Embedded",
+    "section": "core",
+    "image": "/placeholder-user.jpg",
+    "linkedin": "https://www.linkedin.com"
+  },
+  {
+    "id": "core-4",
+    "name": "Kunal Joshi",
+    "role": "Tech Lead - Mechanical",
+    "section": "core",
+    "image": "/placeholder-user.jpg"
+  },
+  {
+    "id": "core-5",
+    "name": "Sana Khan",
+    "role": "Events Coordinator",
+    "section": "core",
+    "image": "/placeholder-user.jpg",
+    "linkedin": "https://www.linkedin.com"
+  },
+  {
+    "id": "core-6",
+    "name": "Aditya Menon",
+    "role": "Outreach Lead",
+    "section": "core",
+    "image": "/placeholder-user.jpg"
+  },
+  {
+    "id": "member-1",
+    "name": "Anika Bose",
+    "role": "Member",
+    "section": "members",
+    "image": "/placeholder-user.jpg"
+  },
+  {
+    "id": "member-2",
+    "name": "Harsh Verma",
+    "role": "Member",
+    "section": "members",
+    "image": "/placeholder-user.jpg"
+  },
+  {
+    "id": "member-3",
+    "name": "Nitin George",
+    "role": "Member",
+    "section": "members",
+    "image": "/placeholder-user.jpg"
+  },
+  {
+    "id": "member-4",
+    "name": "Suhani Das",
+    "role": "Member",
+    "section": "members",
+    "image": "/placeholder-user.jpg"
+  },
+  {
+    "id": "member-5",
+    "name": "Yash Agrawal",
+    "role": "Member",
+    "section": "members",
+    "image": "/placeholder-user.jpg"
+  },
+  {
+    "id": "member-6",
+    "name": "Preeti Iyer",
+    "role": "Member",
+    "section": "members",
+    "image": "/placeholder-user.jpg"
+  },
+  {
+    "id": "member-7",
+    "name": "Mohit Batra",
+    "role": "Member",
+    "section": "members",
+    "image": "/placeholder-user.jpg"
+  },
+  {
+    "id": "member-8",
+    "name": "Nisha Reddy",
+    "role": "Member",
+    "section": "members",
+    "image": "/placeholder-user.jpg"
+  }
+]

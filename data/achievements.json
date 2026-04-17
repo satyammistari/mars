@@ -1,0 +1,51 @@
+[
+  {
+    "id": "a-1",
+    "type": "Win",
+    "title": "National Robotics Challenge - 1st Place",
+    "year": "2025",
+    "description": "Won first place in autonomous navigation at a national-level inter-college competition."
+  },
+  {
+    "id": "a-2",
+    "type": "Win",
+    "title": "State Innovation Hackathon - 2nd Place",
+    "year": "2024",
+    "description": "Secured runner-up for an industrial sorting robot powered by computer vision."
+  },
+  {
+    "id": "a-3",
+    "type": "Certificate",
+    "title": "Best Technical Club - Engineering Expo",
+    "year": "2025",
+    "description": "Recognized for consistent technical output, student engagement, and mentoring programs."
+  },
+  {
+    "id": "a-4",
+    "type": "Certificate",
+    "title": "Industry Collaboration Excellence",
+    "year": "2025",
+    "description": "Awarded for conducting hands-on sessions with partner robotics startups."
+  },
+  {
+    "id": "a-5",
+    "type": "Milestone",
+    "title": "150+ Active Members",
+    "year": "2026",
+    "description": "Crossed 150 active contributors across robotics, automation, and mechanical verticals."
+  },
+  {
+    "id": "a-6",
+    "type": "Milestone",
+    "title": "25+ Events Hosted",
+    "year": "2025",
+    "description": "Delivered technical workshops, competitions, and research meetups throughout the year."
+  },
+  {
+    "id": "a-7",
+    "type": "Milestone",
+    "title": "3 Inter-College Partnerships",
+    "year": "2024",
+    "description": "Collaborated with peer institutions for cross-campus competitions and project sharing."
+  }
+]

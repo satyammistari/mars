@@ -1,0 +1,98 @@
+[
+  {
+    "id": "rb-1",
+    "title": "Introduction to Robotics",
+    "category": "Robotics Basics",
+    "type": "Video",
+    "description": "Core concepts: kinematics, control loops, and sensing fundamentals.",
+    "link": "https://www.youtube.com/watch?v=szQOQz1zAzk"
+  },
+  {
+    "id": "rb-2",
+    "title": "Robot Kinematics Notes",
+    "category": "Robotics Basics",
+    "type": "PDF",
+    "description": "A concise primer on forward and inverse kinematics.",
+    "link": "https://ocw.mit.edu"
+  },
+  {
+    "id": "ae-1",
+    "title": "Arduino Fast Track",
+    "category": "Arduino / Embedded",
+    "type": "Video",
+    "description": "Quick start with Arduino IDE, sensors, and actuator control.",
+    "link": "https://www.youtube.com/watch?v=BLrHTHUjPuw"
+  },
+  {
+    "id": "ae-2",
+    "title": "Embedded C Cheat Sheet",
+    "category": "Arduino / Embedded",
+    "type": "PDF",
+    "description": "Useful references for embedded C and memory-safe coding.",
+    "link": "https://www.nxp.com/docs/en/supporting-information/EMBEDDED-C.pdf"
+  },
+  {
+    "id": "md-1",
+    "title": "Design for Manufacturability",
+    "category": "Mechanical Design",
+    "type": "PDF",
+    "description": "Practical guide for robust and manufacturable parts.",
+    "link": "https://www.autodesk.com"
+  },
+  {
+    "id": "md-2",
+    "title": "Solid Modeling Workflow",
+    "category": "Mechanical Design",
+    "type": "Video",
+    "description": "Clean part modeling and assembly constraints in CAD.",
+    "link": "https://www.youtube.com/watch?v=6M4Rk8eQh6M"
+  },
+  {
+    "id": "cm-1",
+    "title": "Python for Robotics",
+    "category": "Coding / ML",
+    "type": "Video",
+    "description": "Use Python for control scripts, simulation, and rapid testing.",
+    "link": "https://www.youtube.com/watch?v=rfscVS0vtbw"
+  },
+  {
+    "id": "cm-2",
+    "title": "ML Fundamentals for Engineers",
+    "category": "Coding / ML",
+    "type": "PDF",
+    "description": "Model basics, validation, and deployment thinking.",
+    "link": "https://developers.google.com/machine-learning/crash-course"
+  },
+  {
+    "id": "rb-3",
+    "title": "Sensors and Actuators Overview",
+    "category": "Robotics Basics",
+    "type": "Video",
+    "description": "How common sensors and motor systems work together.",
+    "link": "https://www.youtube.com/watch?v=5s0XyA5NnNQ"
+  },
+  {
+    "id": "ae-3",
+    "title": "ESP32 Communication Guide",
+    "category": "Arduino / Embedded",
+    "type": "PDF",
+    "description": "Wi-Fi, BLE, and serial communication patterns with ESP32.",
+    "link": "https://docs.espressif.com"
+  },
+  {
+    "id": "md-3",
+    "title": "Mechanism Design Basics",
+    "category": "Mechanical Design",
+    "type": "Video",
+    "description": "Understand joints, linkages, and transmission strategies.",
+    "link": "https://www.youtube.com/watch?v=4X9M7L4f3Ps"
+  },
+  {
+    "id": "cm-3",
+    "title": "Computer Vision Starter Guide",
+    "category": "Coding / ML",
+    "type": "PDF",
+    "description": "Image pipelines, feature extraction, and OpenCV basics.",
+    "link": "https://opencv.org"
+  }
+]

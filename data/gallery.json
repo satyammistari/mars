@@ -1,0 +1,56 @@
+[
+  {
+    "id": "g-1",
+    "title": "Robo Rush Arena",
+    "category": "Competitions",
+    "image": "/portfolio-images/ai-platform-1.jpg"
+  },
+  {
+    "id": "g-2",
+    "title": "Prototype Showcase",
+    "category": "Events",
+    "image": "/portfolio-images/crypto-analytics-1.jpg"
+  },
+  {
+    "id": "g-3",
+    "title": "Embedded Lab Session",
+    "category": "Workshops",
+    "image": "/portfolio-images/saas-dashboard-1.jpg"
+  },
+  {
+    "id": "g-4",
+    "title": "CAD Review Board",
+    "category": "Workshops",
+    "image": "/portfolio-images/ecommerce-interface-1.jpg"
+  },
+  {
+    "id": "g-5",
+    "title": "Team Building Day",
+    "category": "Events",
+    "image": "/portfolio-images/fintech-dashboard-1.jpg"
+  },
+  {
+    "id": "g-6",
+    "title": "National Finals",
+    "category": "Competitions",
+    "image": "/portfolio-images/mobile-app-1.jpg"
+  },
+  {
+    "id": "g-7",
+    "title": "Robotics Orientation",
+    "category": "Events",
+    "image": "/portfolio-images/healthcare-platform-1.jpg"
+  },
+  {
+    "id": "g-8",
+    "title": "Control Systems Lab",
+    "category": "Workshops",
+    "image": "/portfolio-images/saas-dashboard-2.jpg"
+  },
+  {
+    "id": "g-9",
+    "title": "Autonomous Bot Trials",
+    "category": "Competitions",
+    "image": "/modern-task-dashboard.png"
+  }
+]
