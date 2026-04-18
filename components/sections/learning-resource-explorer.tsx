@@ -17,10 +17,10 @@ interface LearningResourceExplorerProps {
 type FilterCategory = "All" | ResourceCategory
 
 const difficultyMap: Record<string, { label: string; color: string }> = {
-  "Robotics Basics": { label: "Beginner", color: "border-emerald-400/30 bg-emerald-500/10 text-emerald-300" },
-  "Arduino / Embedded": { label: "Intermediate", color: "border-amber-400/30 bg-amber-500/10 text-amber-300" },
-  "Mechanical Design": { label: "Intermediate", color: "border-amber-400/30 bg-amber-500/10 text-amber-300" },
-  "Coding / ML": { label: "Advanced", color: "border-rose-400/30 bg-rose-500/10 text-rose-300" },
+  "Robotics Basics": { label: "Beginner", color: "border-green-500/20 bg-green-500/10 text-green-700 dark:text-green-400" },
+  "Arduino / Embedded": { label: "Intermediate", color: "border-yellow-500/20 bg-yellow-500/10 text-yellow-700 dark:text-yellow-400" },
+  "Mechanical Design": { label: "Intermediate", color: "border-yellow-500/20 bg-yellow-500/10 text-yellow-700 dark:text-yellow-400" },
+  "Coding / ML": { label: "Advanced", color: "border-red-500/20 bg-red-500/10 text-red-700 dark:text-red-400" },
 }
 
 export function LearningResourceExplorer({ resources }: LearningResourceExplorerProps) {
@@ -49,20 +49,20 @@ export function LearningResourceExplorer({ resources }: LearningResourceExplorer
   return (
     <div className="space-y-8">
       {/* Search & Filters - Futuristic Dashboard Style */}
-      <div className="rounded-2xl border border-slate-700/50 bg-slate-900/40 p-5 backdrop-blur-sm">
+      <div className="rounded-2xl border border-border-color bg-bg-secondary p-5 shadow-sm">
         <div className="flex items-center gap-3">
           <div className="relative flex-1">
-            <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" />
+            <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-text-secondary" />
             <Input
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Search topics, guides, or tools..."
-              className="h-12 pl-11 text-base"
+              className="h-12 pl-11 text-base shadow-none border-border-color bg-bg-primary"
             />
           </div>
-          <div className="hidden items-center gap-2 rounded-xl border border-slate-700/40 bg-slate-900/50 px-3 py-2 sm:flex">
-            <span className="text-[10px] uppercase tracking-[0.2em] text-slate-500">Results</span>
-            <span className="text-sm font-bold text-cyan-200">{filteredResources.length}</span>
+          <div className="hidden items-center gap-2 rounded-xl border border-border-color bg-bg-primary px-3 py-2 sm:flex">
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-text-secondary">Results</span>
+            <span className="text-sm font-bold text-accent-color">{filteredResources.length}</span>
           </div>
         </div>
 
@@ -74,8 +74,8 @@ export function LearningResourceExplorer({ resources }: LearningResourceExplorer
               onClick={() => setActiveCategory(category)}
               className={
                 activeCategory === category
-                  ? "rounded-full border border-cyan-300/35 bg-cyan-500/15 px-4 py-1.5 text-xs font-medium text-cyan-100 shadow-[0_0_12px_rgba(56,189,248,0.1)] transition-all"
-                  : "rounded-full border border-slate-700/50 px-4 py-1.5 text-xs font-medium text-slate-400 transition-all duration-300 hover:border-slate-600 hover:bg-slate-800/60 hover:text-slate-200"
+                  ? "rounded-full border border-accent-color/30 bg-accent-color/10 px-4 py-1.5 text-xs font-bold text-accent-color shadow-sm transition-all"
+                  : "rounded-full border border-border-color bg-bg-primary px-4 py-1.5 text-xs font-medium text-text-secondary shadow-sm transition-all duration-300 hover:border-accent-color/30 hover:bg-bg-secondary hover:text-text-primary"
               }
             >
               {category}
@@ -87,30 +87,30 @@ export function LearningResourceExplorer({ resources }: LearningResourceExplorer
       {/* Resource Cards Grid */}
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {filteredResources.map((resource, index) => {
-          const difficulty = difficultyMap[resource.category] ?? { label: "General", color: "border-slate-500/30 bg-slate-500/10 text-slate-300" }
+          const difficulty = difficultyMap[resource.category] ?? { label: "General", color: "border-border-color bg-bg-secondary text-text-secondary" }
           const TypeIcon = resource.type === "Video" ? Play : FileText
 
           return (
             <Reveal key={resource.id} delay={index * 0.04}>
-              <Card className="group h-full">
+              <Card className="group h-full shadow-[0_4px_24px_-8px_rgba(30,50,100,0.10)] dark:shadow-none">
                 <CardHeader className="space-y-4">
                   <div className="flex items-center justify-between gap-3">
                     <div className="flex items-center gap-2">
-                      <div className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-cyan-300/15 bg-cyan-500/8 text-cyan-300">
+                      <div className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-accent-color/20 bg-accent-color/10 text-accent-color">
                         <TypeIcon className="h-3.5 w-3.5" />
                       </div>
                       <Badge>{resource.type}</Badge>
                     </div>
-                    <span className={`rounded-full border px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider ${difficulty.color}`}>
+                    <span className={`rounded-full border px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider ${difficulty.color}`}>
                       {difficulty.label}
                     </span>
                   </div>
 
                   <div>
-                    <div className="mb-2 text-[10px] uppercase tracking-[0.2em] text-slate-500">{resource.category}</div>
-                    <CardTitle className="text-lg text-slate-100">{resource.title}</CardTitle>
+                    <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-text-secondary/70">{resource.category}</div>
+                    <CardTitle className="text-lg font-bold text-text-primary">{resource.title}</CardTitle>
                   </div>
-                  <CardDescription className="leading-relaxed">{resource.description}</CardDescription>
+                  <CardDescription className="text-sm font-medium leading-relaxed text-text-secondary">{resource.description}</CardDescription>
                 </CardHeader>
 
                 <CardContent>
@@ -118,7 +118,7 @@ export function LearningResourceExplorer({ resources }: LearningResourceExplorer
                     href={resource.link}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-xl border border-slate-700/40 bg-slate-900/40 px-4 py-2.5 text-sm font-medium text-cyan-200 transition-all duration-300 hover:border-cyan-300/30 hover:bg-cyan-500/8 hover:text-cyan-100 hover:shadow-[0_0_16px_rgba(56,189,248,0.1)]"
+                    className="inline-flex items-center gap-2 rounded-xl border border-border-color bg-bg-secondary px-4 py-2.5 text-sm font-bold text-accent-color transition-all duration-300 hover:border-accent-color/30 hover:bg-accent-color/10 hover:shadow-sm"
                   >
                     {resource.type === "Video" ? "Watch" : "Open"} Resource
                     <ExternalLink className="h-3.5 w-3.5" />
@@ -131,8 +131,8 @@ export function LearningResourceExplorer({ resources }: LearningResourceExplorer
       </div>
 
       {filteredResources.length === 0 ? (
-        <div className="rounded-2xl border border-slate-800/50 bg-slate-900/30 p-8 text-center backdrop-blur-sm">
-          <p className="text-sm text-slate-400">No resources match your search. Try a different keyword or category.</p>
+        <div className="rounded-2xl border border-border-color bg-bg-secondary p-8 text-center shadow-sm">
+          <p className="text-sm font-medium text-text-secondary">No resources match your search. Try a different keyword or category.</p>
         </div>
       ) : null}
     </div>

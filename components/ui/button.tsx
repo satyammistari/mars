@@ -5,19 +5,19 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-semibold ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-bold ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
-        default: "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-[0_0_16px_rgba(56,189,248,0.2)] hover:shadow-[0_0_28px_rgba(56,189,248,0.35)] hover:brightness-110",
+        default: "bg-button-bg text-button-text shadow-[0_4px_16px_rgba(25,118,210,0.15)] dark:shadow-none hover:shadow-[0_6px_24px_rgba(25,118,210,0.25)] hover:opacity-90",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-slate-700/60 bg-transparent text-slate-200 hover:border-cyan-300/30 hover:bg-cyan-500/8 hover:text-cyan-100",
+          "border border-border-color bg-bg-primary text-text-primary hover:border-border-hover hover:bg-bg-secondary hover:text-accent-color",
         secondary:
-          "border border-slate-700/60 bg-slate-900/50 text-slate-200 hover:bg-slate-800/80 hover:text-white",
-        ghost: "hover:bg-slate-800/60 hover:text-white",
-        link: "text-cyan-300 underline-offset-4 hover:underline hover:text-cyan-200",
+          "border border-border-color bg-bg-secondary text-text-primary hover:bg-border-color hover:text-text-primary",
+        ghost: "hover:bg-bg-secondary hover:text-text-primary text-text-secondary transition-colors",
+        link: "text-accent-color underline-offset-4 hover:underline hover:text-accent-hover",
       },
       size: {
         default: "h-10 px-5 py-2",

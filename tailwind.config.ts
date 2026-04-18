@@ -11,6 +11,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        "bg-primary": "var(--bg-primary)",
+        "bg-secondary": "var(--bg-secondary)",
+        "text-primary": "var(--text-primary)",
+        "text-secondary": "var(--text-secondary)",
+        "accent-color": "var(--accent)",
+        "accent-hover": "var(--accent-hover)",
+        "border-color": "var(--border-color)",
+        "border-hover": "var(--border-hover)",
+        "card-bg": "var(--card-bg)",
+        "card-hover-bg": "var(--card-hover-bg)",
+        "button-bg": "var(--button-bg)",
+        "button-text": "var(--button-text)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

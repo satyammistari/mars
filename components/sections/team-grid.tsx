@@ -38,12 +38,12 @@ export function TeamGrid({ members }: TeamGridProps) {
             <Reveal>
               <div className="flex items-end gap-4">
                 <div>
-                  <div className="mb-3 inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.26em] text-cyan-200/80">
-                    <span className="h-px w-6 bg-gradient-to-r from-cyan-300 to-transparent" />
+                  <div className="mb-3 inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.26em] text-accent-color">
+                    <span className="h-px w-6 bg-gradient-to-r from-accent-color to-transparent" />
                     {section}
                   </div>
-                  <h3 className="font-['Orbitron'] text-2xl font-semibold text-slate-100">{sectionMeta[section].title}</h3>
-                  <p className="mt-2 text-sm text-slate-400">{sectionMeta[section].description}</p>
+                  <h3 className="font-['Playfair_Display'] text-2xl font-bold text-text-primary">{sectionMeta[section].title}</h3>
+                  <p className="mt-2 text-sm font-medium text-text-secondary">{sectionMeta[section].description}</p>
                 </div>
               </div>
             </Reveal>
@@ -54,19 +54,19 @@ export function TeamGrid({ members }: TeamGridProps) {
                   <Card className="group h-full overflow-hidden">
                     <CardHeader className="space-y-4">
                       {/* Photo with hover zoom */}
-                      <div className="relative h-56 overflow-hidden rounded-xl border border-slate-800/60">
+                      <div className="relative h-56 overflow-hidden rounded-xl border border-border-color">
                         <img
                           src={member.image}
                           alt={member.name}
                           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                       </div>
 
                       <div className="space-y-2">
-                        <CardTitle className="text-base text-slate-100">{member.name}</CardTitle>
-                        <p className="text-sm text-slate-400">{member.role}</p>
-                        <Badge variant="outline" className="capitalize text-slate-300">
+                        <CardTitle className="text-base font-bold text-text-primary">{member.name}</CardTitle>
+                        <p className="text-sm font-medium text-text-secondary">{member.role}</p>
+                        <Badge variant="outline" className="capitalize">
                           {section}
                         </Badge>
                       </div>
@@ -78,7 +78,7 @@ export function TeamGrid({ members }: TeamGridProps) {
                           href={member.linkedin}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex items-center gap-2 rounded-lg border border-slate-700/40 bg-slate-900/40 px-3 py-1.5 text-sm text-blue-300 transition-all duration-300 hover:border-blue-400/30 hover:text-blue-200 hover:shadow-[0_0_12px_rgba(96,165,250,0.15)]"
+                          className="inline-flex items-center gap-2 rounded-lg border border-border-color bg-bg-secondary px-3 py-1.5 text-sm font-bold text-accent-color transition-all duration-300 hover:border-border-hover hover:bg-accent-color/10 hover:text-accent-hover hover:shadow-sm"
                         >
                           <Linkedin className="h-4 w-4" />
                           LinkedIn

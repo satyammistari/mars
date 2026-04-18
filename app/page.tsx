@@ -92,14 +92,14 @@ export default function HomePage() {
             const Icon = stat.icon
             return (
               <Reveal key={stat.label} delay={index * 0.08}>
-                <div className="group relative rounded-2xl border border-slate-700/50 bg-slate-900/40 p-6 backdrop-blur-sm transition-all duration-300 hover:border-cyan-300/30 hover:shadow-[0_0_30px_rgba(56,189,248,0.1)]">
-                  <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-500/5 to-violet-500/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="group relative rounded-2xl border border-border-color/80 bg-card-bg p-6 shadow-sm transition-all duration-300 hover:border-accent-color/50 hover:shadow-[0_8px_28px_rgba(25,118,210,0.1)]">
+                  <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-accent-color/10 to-sky-500/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                   <div className="relative">
-                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-cyan-300/15 bg-cyan-500/8 text-cyan-300">
+                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-accent-hover/20 bg-accent-color/10 text-accent-color">
                       <Icon className="h-5 w-5" />
                     </div>
-                    <p className="mt-4 text-4xl font-black tracking-[-0.06em] text-white">{stat.value}</p>
-                    <p className="mt-2 text-[11px] uppercase tracking-[0.2em] text-slate-400">{stat.label}</p>
+                    <p className="mt-4 text-4xl font-black tracking-[-0.06em] text-text-primary">{stat.value}</p>
+                    <p className="mt-2 text-[11px] uppercase tracking-[0.2em] text-text-secondary/70">{stat.label}</p>
                   </div>
                 </div>
               </Reveal>
@@ -116,12 +116,12 @@ export default function HomePage() {
               <CardHeader className="space-y-4">
                 <div className="flex items-center justify-between gap-4">
                   <Badge variant="secondary">Build pipeline</Badge>
-                  <span className="text-[11px] uppercase tracking-[0.18em] text-slate-500">2026 cycle</span>
+                  <span className="text-[11px] uppercase tracking-[0.18em] text-text-secondary">2026 cycle</span>
                 </div>
-                <CardTitle className="text-2xl text-slate-50">From idea to working prototype</CardTitle>
+                <CardTitle className="text-2xl text-text-primary">From idea to working prototype</CardTitle>
               </CardHeader>
               <CardContent className="space-y-5">
-                <p className="max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
+                <p className="max-w-2xl text-sm leading-7 text-text-secondary sm:text-base">
                   We keep the club around execution. Members join a build track, learn the stack, and ship something
                   tangible instead of collecting slide decks.
                 </p>
@@ -130,13 +130,13 @@ export default function HomePage() {
                     const Icon = stage.icon
 
                     return (
-                      <div key={stage.step} className="group/step rounded-xl border border-slate-700/60 bg-slate-900/50 p-4 transition-all duration-300 hover:border-cyan-300/25 hover:bg-slate-900/70">
+                      <div key={stage.step} className="group/step rounded-xl border border-border-color/80 bg-bg-secondary/80 p-4 transition-all duration-300 hover:border-accent-color/50 hover:bg-card-bg">
                         <div className="flex items-center justify-between gap-4">
-                          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-cyan-100/90">{stage.step}</span>
-                          <Icon className="h-4 w-4 text-cyan-300 transition-transform duration-300 group-hover/step:scale-110" />
+                          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent-color/80">{stage.step}</span>
+                          <Icon className="h-4 w-4 text-accent-color transition-transform duration-300 group-hover/step:scale-110" />
                         </div>
-                        <p className="mt-3 text-sm font-semibold text-slate-50">{stage.title}</p>
-                        <p className="mt-1 text-sm leading-6 text-slate-400">{stage.description}</p>
+                        <p className="mt-3 text-sm font-semibold text-text-primary">{stage.title}</p>
+                        <p className="mt-1 text-sm leading-6 text-text-secondary">{stage.description}</p>
                       </div>
                     )
                   })}
@@ -149,17 +149,15 @@ export default function HomePage() {
             <Reveal delay={0.05}>
               <Card>
                 <CardHeader className="space-y-3">
-                  <div className="flex items-center justify-between gap-3">
-                    <CardTitle className="text-base text-slate-200">Club snapshot</CardTitle>
-                    <CalendarDays className="h-4 w-4 text-cyan-200" />
-                  </div>
-                </CardHeader>
+                <CardTitle className="text-base text-text-primary">Club snapshot</CardTitle>
+                <CalendarDays className="h-4 w-4 text-accent-color" />
+              </CardHeader>
                 <CardContent className="space-y-4">
                   {sideFacts.map((fact) => (
-                    <div key={fact.label} className="flex items-end justify-between gap-4 border-b border-slate-800/60 pb-3 last:border-0 last:pb-0">
+                    <div key={fact.label} className="flex items-end justify-between gap-4 border-b border-border-color/30 pb-3 last:border-0 last:pb-0">
                       <div>
-                        <p className="text-2xl font-black tracking-[-0.05em] text-white">{fact.value}</p>
-                        <p className="mt-1 text-[11px] uppercase tracking-[0.18em] text-slate-500">{fact.label}</p>
+                        <p className="text-2xl font-black tracking-[-0.05em] text-text-primary">{fact.value}</p>
+                        <p className="mt-1 text-[11px] uppercase tracking-[0.18em] text-text-secondary/70">{fact.label}</p>
                       </div>
                     </div>
                   ))}
@@ -171,11 +169,11 @@ export default function HomePage() {
               <Card>
                 <CardHeader className="space-y-3">
                   <div className="flex items-center justify-between gap-3">
-                    <CardTitle className="text-base text-slate-200">Open tracks</CardTitle>
-                    <BookOpen className="h-4 w-4 text-violet-200" />
+                    <CardTitle className="text-base text-text-primary">Open tracks</CardTitle>
+                    <BookOpen className="h-4 w-4 text-accent-color" />
                   </div>
                 </CardHeader>
-                <CardContent className="space-y-3 text-sm text-slate-300">
+                <CardContent className="space-y-3 text-sm text-text-secondary">
                   <p>Mechanical design, automation, embedded systems, and applied ML.</p>
                   <p>Hands-on labs, mentor review, and competition prep in one workflow.</p>
                   <Link href="/learning" className={buttonVariants({ variant: "outline", size: "sm" })}>
@@ -206,17 +204,17 @@ export default function HomePage() {
                 </div>
               </div>
               <CardHeader className="space-y-4">
-                <div className="flex items-center justify-between gap-4 text-xs uppercase tracking-[0.18em] text-slate-500">
+                <div className="flex items-center justify-between gap-4 text-xs uppercase tracking-[0.18em] text-text-secondary">
                   <span>{leadEvent.formattedDate}</span>
                   <span>{leadEvent.location}</span>
                 </div>
-                <CardTitle className="text-2xl text-slate-50">{leadEvent.title}</CardTitle>
+                <CardTitle className="text-2xl text-text-primary">{leadEvent.title}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-5">
-                <p className="text-sm leading-7 text-slate-300 sm:text-base">{leadEvent.summary}</p>
+                <p className="text-sm leading-7 text-text-secondary sm:text-base">{leadEvent.summary}</p>
                 <div className="grid gap-2 sm:grid-cols-2">
                   {leadEvent.highlights.slice(0, 2).map((highlight) => (
-                    <div key={highlight} className="rounded-xl border border-slate-700/60 bg-slate-900/50 px-3 py-2 text-sm text-slate-300">
+                    <div key={highlight} className="rounded-xl border border-border-color bg-bg-secondary px-3 py-2 text-sm text-text-secondary">
                       {highlight}
                     </div>
                   ))}
@@ -236,16 +234,16 @@ export default function HomePage() {
                   <div className="grid gap-0 sm:grid-cols-[0.95fr_1.05fr]">
                     <div className="relative min-h-40 overflow-hidden">
                       <img src={event.image} alt={event.title} className="h-full w-full object-cover transition-transform duration-500 hover:scale-105" />
-                      <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-black/15 to-transparent sm:bg-gradient-to-t" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-black/5 via-black/10 to-transparent sm:bg-gradient-to-t" />
                     </div>
                     <div className="p-5">
-                      <div className="flex items-center justify-between gap-3 text-[11px] uppercase tracking-[0.18em] text-slate-500">
+                      <div className="flex items-center justify-between gap-3 text-[11px] uppercase tracking-[0.18em] text-text-secondary/70">
                         <span>{event.category}</span>
                         <span>{event.formattedDate}</span>
                       </div>
-                      <h3 className="mt-3 text-lg font-semibold text-slate-50">{event.title}</h3>
-                      <p className="mt-2 text-sm leading-6 text-slate-400">{event.summary}</p>
-                      <Link href={`/events/${event.slug}`} className="mt-4 inline-flex text-sm font-semibold text-cyan-100 transition-colors hover:text-cyan-50">
+                      <h3 className="mt-3 text-lg font-semibold text-text-primary">{event.title}</h3>
+                      <p className="mt-2 text-sm leading-6 text-text-secondary">{event.summary}</p>
+                      <Link href={`/events/${event.slug}`} className="mt-4 inline-flex text-sm font-semibold text-accent-color transition-colors hover:text-accent-hover">
                         Open event page
                       </Link>
                     </div>
@@ -272,45 +270,45 @@ export default function HomePage() {
       >
         <div className="grid gap-5 xl:grid-cols-[0.9fr_1.1fr]">
           <Card className="relative h-full overflow-hidden">
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(56,189,248,0.08),transparent_28%),radial-gradient(circle_at_82%_78%,rgba(139,92,246,0.06),transparent_30%)]" />
-            <div className="pointer-events-none absolute right-0 top-0 h-full w-px bg-gradient-to-b from-cyan-300/25 via-transparent to-transparent" />
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(25,118,210,0.05),transparent_28%),radial-gradient(circle_at_82%_78%,rgba(255,152,0,0.04),transparent_30%)]" />
+            <div className="pointer-events-none absolute right-0 top-0 h-full w-px bg-gradient-to-b from-blue-200/40 via-transparent to-transparent" />
             <CardHeader className="relative space-y-4">
               <Badge variant="secondary" className="w-fit">
                 Curriculum map
               </Badge>
-              <CardTitle className="text-2xl text-slate-50 sm:text-[2rem]">Study the stack, then build the stack.</CardTitle>
-              <p className="max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
+              <CardTitle className="text-2xl text-text-primary sm:text-[2rem]">Study the stack, then build the stack.</CardTitle>
+              <p className="max-w-2xl text-sm leading-7 text-text-secondary sm:text-base">
                 The learning hub is arranged like a training plan: foundational robotics, embedded control,
                 mechanical design, then applied code and ML.
               </p>
             </CardHeader>
             <CardContent className="relative space-y-5">
               <div className="grid gap-3 sm:grid-cols-3">
-                <div className="rounded-xl border border-slate-700/50 bg-slate-900/50 p-4">
-                  <p className="text-2xl font-black tracking-[-0.05em] text-white">4</p>
-                  <p className="mt-1 text-[11px] uppercase tracking-[0.18em] text-slate-500">tracks</p>
+                <div className="rounded-xl border border-border-color/80 bg-bg-secondary p-4">
+                  <p className="text-2xl font-black tracking-[-0.05em] text-text-primary">4</p>
+                  <p className="mt-1 text-[11px] uppercase tracking-[0.18em] text-text-secondary/70">tracks</p>
                 </div>
-                <div className="rounded-xl border border-slate-700/50 bg-slate-900/50 p-4">
-                  <p className="text-2xl font-black tracking-[-0.05em] text-white">12+</p>
-                  <p className="mt-1 text-[11px] uppercase tracking-[0.18em] text-slate-500">resources</p>
+                <div className="rounded-xl border border-border-color/80 bg-bg-secondary p-4">
+                  <p className="text-2xl font-black tracking-[-0.05em] text-text-primary">12+</p>
+                  <p className="mt-1 text-[11px] uppercase tracking-[0.18em] text-text-secondary/70">resources</p>
                 </div>
-                <div className="rounded-xl border border-slate-700/50 bg-slate-900/50 p-4">
-                  <p className="text-2xl font-black tracking-[-0.05em] text-white">Hands-on</p>
-                  <p className="mt-1 text-[11px] uppercase tracking-[0.18em] text-slate-500">first</p>
+                <div className="rounded-xl border border-border-color/80 bg-bg-secondary p-4">
+                  <p className="text-2xl font-black tracking-[-0.05em] text-text-primary">Hands-on</p>
+                  <p className="mt-1 text-[11px] uppercase tracking-[0.18em] text-text-secondary/70">first</p>
                 </div>
               </div>
 
               <div className="grid gap-3 sm:grid-cols-2">
                 {learningTracks.map((track, index) => (
-                  <div key={track.title} className="group rounded-xl border border-slate-700/50 bg-slate-900/40 p-4 transition-all duration-300 hover:border-cyan-300/25">
+                  <div key={track.title} className="group rounded-xl border border-border-color/80 bg-bg-secondary p-4 transition-all duration-300 hover:border-accent-color/50 hover:bg-card-bg">
                     <div className="flex items-center justify-between gap-4">
-                      <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-cyan-100/90">
+                      <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent-color/80">
                         0{index + 1}
                       </span>
-                      <span className="h-2 w-2 rounded-full bg-cyan-300 transition-shadow duration-300 group-hover:shadow-[0_0_8px_rgba(56,189,248,0.5)]" />
+                      <span className="h-2 w-2 rounded-full bg-accent-color transition-shadow duration-300 group-hover:shadow-[0_0_8px_rgba(25,118,210,0.45)]" />
                     </div>
-                    <p className="mt-3 text-sm font-semibold text-slate-50">{track.title}</p>
-                    <p className="mt-1 text-sm leading-6 text-slate-400">{track.summary}</p>
+                    <p className="mt-3 text-sm font-semibold text-text-primary">{track.title}</p>
+                    <p className="mt-1 text-sm leading-6 text-text-secondary">{track.summary}</p>
                   </div>
                 ))}
               </div>
@@ -328,19 +326,19 @@ export default function HomePage() {
                 <CardHeader className="space-y-4">
                   <div className="flex items-center justify-between gap-2">
                     <Badge>{resource.type}</Badge>
-                    <span className="text-[11px] uppercase tracking-[0.18em] text-slate-500">{resource.category}</span>
+                    <span className="text-[11px] uppercase tracking-[0.18em] text-text-secondary/70">{resource.category}</span>
                   </div>
-                  <CardTitle className="text-xl leading-tight text-slate-50">{resource.title}</CardTitle>
+                  <CardTitle className="text-xl leading-tight text-text-primary">{resource.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-sm leading-7 text-slate-300">{resource.description}</p>
-                  <div className="flex items-center justify-between gap-3 rounded-xl border border-slate-700/50 bg-slate-900/50 px-3 py-2">
-                    <span className="text-[11px] uppercase tracking-[0.18em] text-slate-500">Quick access</span>
+                  <p className="text-sm leading-7 text-text-secondary">{resource.description}</p>
+                  <div className="flex items-center justify-between gap-3 rounded-xl border border-border-color/50 bg-bg-secondary px-3 py-2">
+                    <span className="text-[11px] uppercase tracking-[0.18em] text-text-secondary/70">Quick access</span>
                     <a
                       href={resource.link}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center text-sm font-semibold text-cyan-100 transition-colors hover:text-cyan-50"
+                      className="inline-flex items-center text-sm font-semibold text-accent-color transition-colors hover:text-accent-hover"
                     >
                       Open
                       <ArrowRight className="ml-2 h-3.5 w-3.5" />
@@ -360,9 +358,9 @@ export default function HomePage() {
             <Card className="h-full">
               <CardHeader className="space-y-3">
                 <Badge variant="secondary" className="w-fit">Core team</Badge>
-                <CardTitle className="text-2xl text-slate-50">Built by students, for students who want to ship hardware.</CardTitle>
+                <CardTitle className="text-2xl text-text-primary">Built by students, for students who want to ship hardware.</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4 text-sm leading-7 text-slate-300">
+              <CardContent className="space-y-4 text-sm leading-7 text-text-secondary">
                 <p>Team leads coordinate labs, competitions, mentoring, and outreach so the club stays active all semester.</p>
                 <p>Every role supports a clear technical pipeline instead of a generic event-only club structure.</p>
                 <Link href="/team" className={buttonVariants({ variant: "outline", size: "sm" })}>
@@ -379,11 +377,11 @@ export default function HomePage() {
                 <Card className="group overflow-hidden">
                   <div className="relative h-52 overflow-hidden">
                     <img src={member.image} alt={member.name} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                   </div>
                   <CardHeader className="space-y-2">
-                    <CardTitle className="text-base text-slate-100">{member.name}</CardTitle>
-                    <p className="text-sm text-slate-400">{member.role}</p>
+                    <CardTitle className="text-base text-text-primary">{member.name}</CardTitle>
+                    <p className="text-sm text-text-secondary">{member.role}</p>
                   </CardHeader>
                 </Card>
               </Reveal>
@@ -394,23 +392,23 @@ export default function HomePage() {
 
       {/* ─── Call to Action ─── */}
       <section className="relative py-20 sm:py-28">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(56,189,248,0.06),transparent_60%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(25,118,210,0.05),transparent_60%)]" />
         <div className="mx-auto w-full max-w-3xl px-4 text-center sm:px-6">
           <Reveal>
-            <div className="rounded-3xl border border-slate-700/50 bg-slate-900/30 p-8 backdrop-blur-sm sm:p-12">
-              <div className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-br from-cyan-500/5 via-transparent to-violet-500/5" />
-              <h2 className="relative text-balance text-3xl font-black tracking-[-0.04em] text-white sm:text-4xl">
+            <div className="relative rounded-3xl border border-border-color/80 bg-card-bg p-8 shadow-[0_8px_48px_-16px_rgba(25,118,210,0.14)] sm:p-12">
+              <div className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-br from-accent-color/10 via-transparent to-amber-500/10" />
+              <h2 className="relative text-balance text-3xl font-black tracking-[-0.02em] text-text-primary sm:text-4xl">
                 Ready to build something{" "}
                 <span className="gradient-text">extraordinary</span>?
               </h2>
-              <p className="relative mt-4 text-slate-400 sm:text-lg">
+              <p className="relative mt-4 text-text-secondary sm:text-lg">
                 Join MARS CLUB and turn your ideas into real engineering systems.
                 No prior robotics experience needed — just curiosity and drive.
               </p>
               <div className="relative mt-8 flex flex-wrap items-center justify-center gap-4">
                 <Link
                   href="/contact"
-                  className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-8 text-sm font-semibold text-white shadow-[0_0_24px_rgba(56,189,248,0.25)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(56,189,248,0.4)]"
+                  className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-blue-600 to-sky-500 px-8 text-sm font-semibold text-white shadow-[0_4px_20px_rgba(25,118,210,0.28)] transition-all duration-300 hover:shadow-[0_6px_28px_rgba(25,118,210,0.42)]"
                 >
                   <span className="relative z-10">Join MARS Club</span>
                   <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />

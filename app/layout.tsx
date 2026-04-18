@@ -1,23 +1,23 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Orbitron, Space_Grotesk } from "next/font/google"
+import { Playfair_Display, Lora } from "next/font/google"
 
 import { SiteFooter } from "@/components/sections/site-footer"
 import { SiteNavbar } from "@/components/sections/site-navbar"
 import { ClientShell } from "@/components/sections/client-shell"
-import { EtheralShadow } from "@/components/ui/etheral-shadow"
+import { ThemeProvider } from "@/components/theme-provider"
 
 import "./globals.css"
 
-const orbitron = Orbitron({
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-orbitron",
+  variable: "--font-playfair",
   display: "swap",
 })
 
-const spaceGrotesk = Space_Grotesk({
+const lora = Lora({
   subsets: ["latin"],
-  variable: "--font-space-grotesk",
+  variable: "--font-lora",
   display: "swap",
 })
 
@@ -33,27 +33,24 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${orbitron.variable} ${spaceGrotesk.variable} font-sans text-foreground antialiased`}>
-        <ClientShell>
-          <div className="relative min-h-screen overflow-x-clip bg-[#020617]">
-            {/* Etheral Shadow Background */}
-            <div className="fixed inset-0 z-0 w-full h-full pointer-events-none">
-              <EtheralShadow
-                color="rgba(56, 189, 248, 0.35)"
-                animation={{ scale: 75, speed: 60 }}
-                noise={{ opacity: 0.6, scale: 1 }}
-                sizing="fill"
-              />
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${playfairDisplay.variable} ${lora.variable} font-serif antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ClientShell>
+            <div className="relative min-h-screen overflow-x-clip bg-bg-primary transition-colors duration-300">
+              <div className="relative z-20">
+                <SiteNavbar />
+                <div className="relative z-10">{children}</div>
+                <SiteFooter />
+              </div>
             </div>
-
-            <div className="relative z-20">
-              <SiteNavbar />
-              <div className="relative z-10">{children}</div>
-              <SiteFooter />
-            </div>
-          </div>
-        </ClientShell>
+          </ClientShell>
+        </ThemeProvider>
       </body>
     </html>
   )

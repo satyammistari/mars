@@ -36,8 +36,8 @@ export function GalleryExplorer({ items }: GalleryExplorerProps) {
             onClick={() => setActiveCategory(category)}
             className={
               activeCategory === category
-                ? "rounded-full border border-cyan-300/35 bg-cyan-500/15 px-5 py-2 text-sm font-medium text-cyan-100 shadow-[0_0_12px_rgba(56,189,248,0.1)] transition-all"
-                : "rounded-full border border-slate-700/50 bg-slate-900/40 px-5 py-2 text-sm font-medium text-slate-400 transition-all duration-300 hover:border-slate-600 hover:bg-slate-800/60 hover:text-slate-200"
+                ? "rounded-full border border-accent-color/30 bg-accent-color/10 px-5 py-2 text-sm font-bold text-accent-color shadow-sm transition-all"
+                : "rounded-full border border-border-color bg-bg-primary px-5 py-2 text-sm font-medium text-text-secondary shadow-sm transition-all duration-300 hover:border-accent-hover/30 hover:bg-bg-secondary hover:text-text-primary"
             }
           >
             {category}
@@ -63,20 +63,20 @@ export function GalleryExplorer({ items }: GalleryExplorerProps) {
                     />
 
                     {/* Default subtle overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/5 to-transparent transition-all duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent transition-all duration-500" />
 
                     {/* Hover overlay with title reveal */}
-                    <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/85 via-black/40 to-transparent opacity-0 transition-all duration-500 group-hover:opacity-100">
+                    <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 transition-all duration-500 group-hover:opacity-100">
                       <div className="p-5">
-                        <div className="mb-2 inline-flex rounded-full border border-cyan-300/20 bg-cyan-500/10 px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-cyan-200 backdrop-blur-sm">
+                        <div className="mb-2 inline-flex rounded-full border border-blue-200/50 bg-blue-500/20 px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-white backdrop-blur-sm">
                           {item.category}
                         </div>
-                        <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                        <h3 className="text-lg font-bold text-white">{item.title}</h3>
                       </div>
                     </div>
 
                     {/* Glow border on hover */}
-                    <div className="pointer-events-none absolute inset-0 rounded-[1.1rem] border-2 border-transparent transition-all duration-500 group-hover:border-cyan-400/25 group-hover:shadow-[inset_0_0_24px_rgba(56,189,248,0.08)]" />
+                    <div className="pointer-events-none absolute inset-0 rounded-[1.1rem] border border-transparent transition-all duration-500 group-hover:border-blue-300/40 group-hover:shadow-[inset_0_0_24px_rgba(25,118,210,0.15)]" />
                   </div>
                 </Card>
               </div>
@@ -86,8 +86,8 @@ export function GalleryExplorer({ items }: GalleryExplorerProps) {
       </div>
 
       {filteredItems.length === 0 && (
-        <div className="rounded-2xl border border-slate-800/50 bg-slate-900/30 p-8 text-center backdrop-blur-sm">
-          <p className="text-sm text-slate-400">No gallery items match the selected filter.</p>
+        <div className="rounded-2xl border border-border-color bg-bg-secondary p-8 text-center shadow-sm">
+          <p className="text-sm font-medium text-text-secondary">No gallery items match the selected filter.</p>
         </div>
       )}
     </div>
