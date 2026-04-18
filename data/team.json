@@ -36,8 +36,8 @@
   },
   {
     "id": "core-5",
-    "name": "Mr. Vikram Pathare",
-    "role": "SE - Sponsorship Head",
+    "name": "Mr. Sushant Chavan",
+    "role": "TE - Research & Development Head",
     "section": "core",
     "image": "/placeholder-user.jpg"
   },
@@ -57,10 +57,11 @@
   },
   {
     "id": "core-8",
-    "name": "Mr. Sushant Chavan",
-    "role": "TE - Research & Development Head",
+    "name": "Mr. Vikram Pathare",
+    "role": "SE - Sponsorship Head",
     "section": "core",
     "image": "/placeholder-user.jpg"
+    
   },
   {
     "id": "core-9",

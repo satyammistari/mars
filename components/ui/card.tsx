@@ -6,7 +6,7 @@ const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElemen
   <div
     ref={ref}
     className={cn(
-      "group relative overflow-hidden rounded-[1.1rem] border border-slate-700/80 bg-[linear-gradient(180deg,rgba(10,16,31,0.98),rgba(5,10,20,0.96))] text-slate-100 shadow-[0_18px_50px_-32px_rgba(15,23,42,0.8)] transition-all duration-300 before:pointer-events-none before:absolute before:inset-0 before:bg-[url('/noise-texture.png')] before:bg-[length:320px_320px] before:opacity-[0.07] before:mix-blend-overlay before:content-[''] after:pointer-events-none after:absolute after:inset-x-0 after:top-0 after:h-[3px] after:bg-gradient-to-r after:from-cyan-300/85 after:via-blue-300/70 after:to-violet-300/85 after:content-[''] hover:-translate-y-1 hover:border-cyan-300/35 hover:shadow-[0_22px_60px_-34px_rgba(56,189,248,0.42)]",
+      "group/card relative overflow-hidden rounded-2xl border border-slate-700/50 bg-[linear-gradient(180deg,rgba(10,16,31,0.95),rgba(5,10,20,0.92))] text-slate-100 shadow-[0_12px_40px_-20px_rgba(0,0,0,0.6)] backdrop-blur-sm transition-all duration-400 before:pointer-events-none before:absolute before:inset-0 before:bg-[url('/noise-texture.png')] before:bg-[length:280px_280px] before:opacity-[0.04] before:mix-blend-overlay before:content-[''] after:pointer-events-none after:absolute after:inset-x-0 after:top-0 after:h-[2px] after:bg-gradient-to-r after:from-cyan-400/60 after:via-blue-400/50 after:to-violet-400/60 after:opacity-80 after:content-[''] hover:-translate-y-1 hover:border-cyan-300/25 hover:shadow-[0_20px_50px_-24px_rgba(56,189,248,0.25)]",
       className,
     )}
     {...props}
@@ -25,7 +25,7 @@ const CardTitle = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HT
 CardTitle.displayName = "CardTitle"
 
 const CardDescription = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>>(
-  ({ className, ...props }, ref) => <p ref={ref} className={cn("text-sm text-slate-400", className)} {...props} />,
+  ({ className, ...props }, ref) => <p ref={ref} className={cn("text-sm leading-relaxed text-slate-400", className)} {...props} />,
 )
 CardDescription.displayName = "CardDescription"
 

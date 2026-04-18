@@ -1,4 +1,9 @@
-import Spline from "@splinetool/react-spline/next"
+import type { ComponentType } from "react"
+
+import type { SplineProps } from "@splinetool/react-spline"
+import SplineNext from "@splinetool/react-spline/next"
+
+const Spline = SplineNext as unknown as ComponentType<SplineProps>
 
 export function SplineScene() {
   return (

@@ -11,7 +11,7 @@ interface TeamGridProps {
 
 const sectionMeta: Record<TeamSection, { title: string; description: string }> = {
   faculty: {
-    title: "Faculty",
+    title: "Faculty Coordinators",
     description: "Guidance from mentors shaping our technical direction.",
   },
   core: {
@@ -26,7 +26,7 @@ const sectionMeta: Record<TeamSection, { title: string; description: string }> =
 
 export function TeamGrid({ members }: TeamGridProps) {
   return (
-    <div className="space-y-14">
+    <div className="space-y-16">
       {(Object.keys(sectionMeta) as TeamSection[]).map((section) => {
         const sectionMembers = members.filter((member) => member.section === section)
         if (sectionMembers.length === 0) {
@@ -34,26 +34,39 @@ export function TeamGrid({ members }: TeamGridProps) {
         }
 
         return (
-          <div key={section} className="space-y-6">
-            <div>
-              <h3 className="font-['Orbitron'] text-2xl font-semibold text-slate-100">{sectionMeta[section].title}</h3>
-              <p className="mt-2 text-sm text-slate-400">{sectionMeta[section].description}</p>
-            </div>
+          <div key={section} className="space-y-8">
+            <Reveal>
+              <div className="flex items-end gap-4">
+                <div>
+                  <div className="mb-3 inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.26em] text-cyan-200/80">
+                    <span className="h-px w-6 bg-gradient-to-r from-cyan-300 to-transparent" />
+                    {section}
+                  </div>
+                  <h3 className="font-['Orbitron'] text-2xl font-semibold text-slate-100">{sectionMeta[section].title}</h3>
+                  <p className="mt-2 text-sm text-slate-400">{sectionMeta[section].description}</p>
+                </div>
+              </div>
+            </Reveal>
 
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {sectionMembers.map((member, index) => (
                 <Reveal key={member.id} delay={index * 0.04}>
-                  <Card className="h-full">
+                  <Card className="group h-full overflow-hidden">
                     <CardHeader className="space-y-4">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="h-56 w-full rounded-xl border border-slate-800/90 object-cover"
-                      />
+                      {/* Photo with hover zoom */}
+                      <div className="relative h-56 overflow-hidden rounded-xl border border-slate-800/60">
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                      </div>
+
                       <div className="space-y-2">
                         <CardTitle className="text-base text-slate-100">{member.name}</CardTitle>
                         <p className="text-sm text-slate-400">{member.role}</p>
-                        <Badge variant="outline" className="capitalize text-slate-200">
+                        <Badge variant="outline" className="capitalize text-slate-300">
                           {section}
                         </Badge>
                       </div>
@@ -65,7 +78,7 @@ export function TeamGrid({ members }: TeamGridProps) {
                           href={member.linkedin}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex items-center gap-2 text-sm text-blue-300 transition hover:text-blue-200"
+                          className="inline-flex items-center gap-2 rounded-lg border border-slate-700/40 bg-slate-900/40 px-3 py-1.5 text-sm text-blue-300 transition-all duration-300 hover:border-blue-400/30 hover:text-blue-200 hover:shadow-[0_0_12px_rgba(96,165,250,0.15)]"
                         >
                           <Linkedin className="h-4 w-4" />
                           LinkedIn
