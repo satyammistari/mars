@@ -11,7 +11,7 @@
     "name": "Mr. Satyam Mistari",
     "role": "TE - President",
     "section": "core",
-    "image": "/placeholder-user.jpg"
+    "image": "/images/team/satyam-mistari.jpg"
   },
   {
     "id": "core-2",
@@ -25,7 +25,7 @@
     "name": "Ms. Shreya Vaidya",
     "role": "SE - Secretary",
     "section": "core",
-    "image": "/placeholder-user.jpg"
+    "image": "/images/team/shreya-vaidya.jpg"
   },
   {
     "id": "core-4",
@@ -39,14 +39,14 @@
     "name": "Mr. Sushant Chavan",
     "role": "TE - Research & Development Head",
     "section": "core",
-    "image": "/placeholder-user.jpg"
+    "image": "/images/team/sushant-chavan.jpg"
   },
   {
     "id": "core-6",
     "name": "Ms. Swarada Naphade",
     "role": "SE - Marketing Head",
     "section": "core",
-    "image": "/placeholder-user.jpg"
+    "image": "/images/team/swarada-naphade.jpg"
   },
   {
     "id": "core-7",
@@ -60,14 +60,13 @@
     "name": "Mr. Vikram Pathare",
     "role": "SE - Sponsorship Head",
     "section": "core",
-    "image": "/placeholder-user.jpg"
-    
+    "image": "/images/team/vikram-pathare.jpg"
   },
   {
     "id": "core-9",
     "name": "Ms. Namrata Gaikwad",
     "role": "SE - Training/Workshop Head",
     "section": "core",
-    "image": "/placeholder-user.jpg"
+    "image": "/images/team/namrata-gaikwad.jpg"
   }
 ]

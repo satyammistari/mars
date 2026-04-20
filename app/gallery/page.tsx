@@ -2,6 +2,7 @@ import galleryData from "@/data/gallery.json"
 import { Reveal } from "@/components/sections/reveal"
 import { GalleryExplorer } from "@/components/sections/gallery-explorer"
 import { SectionWrapper } from "@/components/sections/section-wrapper"
+import { HorizontalImageScroll } from "@/components/ui/horizontal-image-scroll"
 import type { GalleryItem } from "@/types/mars"
 
 const items = galleryData as GalleryItem[]
@@ -28,6 +29,8 @@ export default function GalleryPage() {
           </Reveal>
         </div>
       </section>
+
+      <HorizontalImageScroll />
 
       <SectionWrapper>
         <GalleryExplorer items={items} />

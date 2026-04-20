@@ -8,9 +8,13 @@ import { HomeHero } from "@/components/sections/home-hero"
 import { Reveal } from "@/components/sections/reveal"
 import { SplineScene } from "@/components/sections/spline-scene"
 import { SectionWrapper } from "@/components/sections/section-wrapper"
+import { ObjectivesInitiativesSection } from "@/components/sections/objectives-initiatives"
+import { StudentFeedbackMarquee } from "@/components/sections/student-feedback"
+import { SponsorsSection } from "@/components/sections/sponsors"
 import { Badge } from "@/components/ui/badge"
 import { buttonVariants } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { FloatingStickers } from "@/components/ui/floating-stickers"
 import type { ClubEvent, LearningResource, TeamMember } from "@/types/mars"
 
 const events = (eventsData as ClubEvent[]).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
@@ -78,7 +82,10 @@ export default function HomePage() {
   const secondaryEvents = featuredEvents.slice(1)
 
   return (
-    <main>
+    <main className="relative">
+      {/* Interactive, draggable, floating stickers overlay for a cool 1st-view impression */}
+      <FloatingStickers />
+
       <HomeHero splineScene={<SplineScene />} />
 
       {/* ─── Stats Section ─── */}
@@ -149,9 +156,9 @@ export default function HomePage() {
             <Reveal delay={0.05}>
               <Card>
                 <CardHeader className="space-y-3">
-                <CardTitle className="text-base text-text-primary">Club snapshot</CardTitle>
-                <CalendarDays className="h-4 w-4 text-accent-color" />
-              </CardHeader>
+                  <CardTitle className="text-base text-text-primary">Club snapshot</CardTitle>
+                  <CalendarDays className="h-4 w-4 text-accent-color" />
+                </CardHeader>
                 <CardContent className="space-y-4">
                   {sideFacts.map((fact) => (
                     <div key={fact.label} className="flex items-end justify-between gap-4 border-b border-border-color/30 pb-3 last:border-0 last:pb-0">
@@ -186,6 +193,9 @@ export default function HomePage() {
           </div>
         </div>
       </SectionWrapper>
+
+      {/* ─── Objectives & Initiatives ─── */}
+      <ObjectivesInitiativesSection />
 
       {/* ─── Featured Events ─── */}
       <SectionWrapper
@@ -389,6 +399,12 @@ export default function HomePage() {
           </div>
         </div>
       </SectionWrapper>
+
+      {/* ─── Student Feedback Marquee ─── */}
+      <StudentFeedbackMarquee />
+
+      {/* ─── Sponsorships & Collaborations ─── */}
+      <SponsorsSection />
 
       {/* ─── Call to Action ─── */}
       <section className="relative py-20 sm:py-28">

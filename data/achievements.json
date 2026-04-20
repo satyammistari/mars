@@ -2,50 +2,29 @@
   {
     "id": "a-1",
     "type": "Win",
-    "title": "National Robotics Challenge - 1st Place",
+    "title": "Finalist in SIH (Smart India Hackathon)",
     "year": "2025",
-    "description": "Won first place in autonomous navigation at a national-level inter-college competition."
+    "description": "Selected among top teams nationwide to build advanced hardware and software solutions."
   },
   {
     "id": "a-2",
-    "type": "Win",
-    "title": "State Innovation Hackathon - 2nd Place",
-    "year": "2024",
-    "description": "Secured runner-up for an industrial sorting robot powered by computer vision."
+    "type": "Certificate",
+    "title": "Participated in eYantra Competition",
+    "year": "2025",
+    "description": "Gained invaluable experience in advanced robotic manipulation, sensor arrays, and path planning."
   },
   {
     "id": "a-3",
-    "type": "Certificate",
-    "title": "Best Technical Club - Engineering Expo",
-    "year": "2025",
-    "description": "Recognized for consistent technical output, student engagement, and mentoring programs."
+    "type": "Milestone",
+    "title": "5+ Hackathons",
+    "year": "2024",
+    "description": "Participated in more than 5 major national-level hackathons, demonstrating consistent engineering skills."
   },
   {
     "id": "a-4",
-    "type": "Certificate",
-    "title": "Industry Collaboration Excellence",
-    "year": "2025",
-    "description": "Awarded for conducting hands-on sessions with partner robotics startups."
-  },
-  {
-    "id": "a-5",
-    "type": "Milestone",
-    "title": "150+ Active Members",
-    "year": "2026",
-    "description": "Crossed 150 active contributors across robotics, automation, and mechanical verticals."
-  },
-  {
-    "id": "a-6",
-    "type": "Milestone",
-    "title": "25+ Events Hosted",
-    "year": "2025",
-    "description": "Delivered technical workshops, competitions, and research meetups throughout the year."
-  },
-  {
-    "id": "a-7",
-    "type": "Milestone",
-    "title": "3 Inter-College Partnerships",
+    "type": "Win",
+    "title": "Finalist in National Level Competitions",
     "year": "2024",
-    "description": "Collaborated with peer institutions for cross-campus competitions and project sharing."
+    "description": "Achieved finalist status in multiple prestigious national and state-level robotics challenges."
   }
 ]
