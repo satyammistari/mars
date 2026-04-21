@@ -8,6 +8,7 @@ import { SectionWrapper } from "@/components/sections/section-wrapper"
 import { Badge } from "@/components/ui/badge"
 import { buttonVariants } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { HorizontalImageScroll } from "@/components/ui/horizontal-image-scroll"
 import type { ClubEvent } from "@/types/mars"
 
 const events = eventsData as ClubEvent[]
@@ -79,36 +80,51 @@ export default function EventDetailPage({ params }: EventDetailPageProps) {
 
       <SectionWrapper>
         <Reveal>
-          <div className="mx-auto max-w-4xl space-y-8">
+          <HorizontalImageScroll />
+          <div className="mx-auto max-w-4xl space-y-8 mt-10">
             {/* Description */}
             <Card>
               <CardHeader>
-                <CardTitle className="text-xl text-slate-100">About This Event</CardTitle>
+                <CardTitle className="text-xl text-text-primary">About This Event</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-base leading-8 text-slate-300">{event.description}</p>
+                <p className="text-base leading-8 text-text-secondary">{event.description}</p>
               </CardContent>
             </Card>
 
             {/* Highlights */}
             <Card>
               <CardHeader>
-                <CardTitle className="text-xl text-slate-100">Event Highlights</CardTitle>
+                <CardTitle className="text-xl text-text-primary">Event Highlights</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
                   {event.highlights.map((highlight, i) => (
                     <li
                       key={highlight}
-                      className="flex items-start gap-3 rounded-xl border border-slate-700/40 bg-slate-900/40 px-4 py-3 text-sm text-slate-300"
+                      className="flex items-start gap-3 rounded-xl border border-border-color bg-bg-secondary px-4 py-3 text-sm text-text-secondary"
                     >
-                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-cyan-300/25 bg-cyan-500/10 text-[10px] font-bold text-cyan-300">
+                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-accent-color/20 bg-accent-color/10 text-[10px] font-bold text-accent-color">
                         {i + 1}
                       </span>
                       {highlight}
                     </li>
                   ))}
                 </ul>
+
+                {/* Event Report Button */}
+                {event.report && (
+                  <div className="mt-6 border-t border-border-color pt-6">
+                    <Link
+                      href={event.report}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={buttonVariants({ variant: "default" })}
+                    >
+                      Download Event Report
+                    </Link>
+                  </div>
+                )}
               </CardContent>
             </Card>
 

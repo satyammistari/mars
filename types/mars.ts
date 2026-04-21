@@ -20,6 +20,7 @@ export interface ClubEvent {
   summary: string
   description: string
   highlights: string[]
+  report?: string
 }
 
 export type ResourceCategory =
