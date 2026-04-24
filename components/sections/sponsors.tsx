@@ -4,22 +4,11 @@ import { HandshakeIcon } from "lucide-react"
 
 const sponsors = [
   {
-    name: "Tech Mahindra",
-    role: "Industry Partner",
-    description: "Supporting our annual hackathons and providing internship opportunities.",
-    logo: "https://logo.clearbit.com/techmahindra.com",
-  },
-  {
-    name: "Bosch",
-    role: "Hardware Sponsor",
-    description: "Equipping our labs with state-of-the-art sensors and automation toolkits.",
-    logo: "https://logo.clearbit.com/bosch.com",
-  },
-  {
-    name: "Tata Motors",
-    role: "Incubation Partner",
-    description: "Mentoring capstone projects in autonomous navigation and EV systems.",
-    logo: "https://logo.clearbit.com/tatamotors.com",
+    name: "PHN Technology",
+    role: "Technology Partner",
+    description: "Empowering our club with cutting-edge technology solutions, mentorship, and industry-grade resources to fuel innovation.",
+    logo: "/phn-technology-logo.png",
+    link: "https://www.phntechnology.com/",
   },
 ]
 
@@ -44,27 +33,33 @@ export function SponsorsSection() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="flex justify-center">
           {sponsors.map((sponsor, i) => {
             return (
-              <div 
-                key={i} 
-                className="group relative flex flex-col items-center justify-center overflow-hidden rounded-2xl border border-border-color/80 bg-bg-secondary p-8 text-center transition-all duration-300 hover:border-accent-color/50 hover:bg-card-bg hover:shadow-lg"
+              <a
+                key={i}
+                href={sponsor.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative flex flex-col items-center justify-center overflow-hidden rounded-2xl border border-border-color/80 bg-bg-secondary p-10 text-center transition-all duration-300 hover:border-accent-color/50 hover:bg-card-bg hover:shadow-lg max-w-sm w-full no-underline"
               >
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-accent-color/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 
-                <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white p-3 shadow-sm ring-1 ring-border-color transition-transform duration-300 group-hover:scale-110 group-hover:ring-accent-color/50">
+                <div className="mb-6 flex h-28 w-28 items-center justify-center rounded-2xl bg-white p-4 shadow-sm ring-1 ring-border-color transition-transform duration-300 group-hover:scale-110 group-hover:ring-accent-color/50">
                   <img src={sponsor.logo} alt={sponsor.name} className="h-full w-full object-contain" />
                 </div>
                 
-                <h4 className="text-xl font-bold tracking-tight text-text-primary">{sponsor.name}</h4>
+                <h4 className="text-2xl font-bold tracking-tight text-text-primary">{sponsor.name}</h4>
                 <div className="mt-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-accent-color">
                   {sponsor.role}
                 </div>
                 <p className="mt-4 text-sm leading-relaxed text-text-secondary">
                   {sponsor.description}
                 </p>
-              </div>
+                <span className="mt-5 inline-flex items-center gap-1 text-xs font-semibold text-accent-color underline underline-offset-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  Visit phntechnology.com ↗
+                </span>
+              </a>
             )
           })}
         </div>
